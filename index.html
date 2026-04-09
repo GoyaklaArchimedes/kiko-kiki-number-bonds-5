@@ -1131,10 +1131,12 @@ function renderD2() {
 function checkDice(choice, correct) {
   var msg = document.getElementById("diceMsg");
   if (choice === correct) {
-    msg.textContent = "✅ Correct!"; msg.className = "msg good";
+    msg.textContent = (currentLang5 === "ja") ? "✅ せいかい！" : "✅ Correct!"; 
+    msg.className = "msg good";
     setTimeout(renderD2, 700);
   } else {
-    msg.textContent = "Look again — try another."; msg.className = "msg bad";
+    msg.textContent = (currentLang5 === "ja") ? "もういちど みて — つぎに いこう。" : "Look again — try another."; 
+    msg.className = "msg bad";
   }
 }
 
